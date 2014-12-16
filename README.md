@@ -19,6 +19,7 @@ The packages are tested on the following platforms:
 ```
 export UCHIWA_VERSION=0.3.0
 export BUILD_NUMBER=1
+export UCHIWA_GIT='github.com/sensu/uchiwa'
 kitchen converge build
 kitchen destroy build
 kitchen test test

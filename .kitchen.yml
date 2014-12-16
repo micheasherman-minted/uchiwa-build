@@ -34,6 +34,7 @@ suites:
       uchiwa-build:
         uchiwa_version: <%= ENV['UCHIWA_VERSION'] %>
         build_number: <%= ENV['BUILD_NUMBER'] %>
+        git: <%= ENV['UCHIWA_GIT'] %>
   - name: test
     run_list:
       - recipe[uchiwa-build::test]
@@ -41,3 +42,4 @@ suites:
       uchiwa-build:
         uchiwa_version: <%= ENV['UCHIWA_VERSION'] %>
         build_number: <%= ENV['BUILD_NUMBER'] %>
+        git: <%= ENV['UCHIWA_GIT'] %>
