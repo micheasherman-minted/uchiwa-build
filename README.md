@@ -20,7 +20,15 @@ The packages are tested on the following platforms:
 export UCHIWA_VERSION=0.3.0
 export BUILD_NUMBER=1
 export UCHIWA_GIT='github.com/sensu/uchiwa'
+export S3_BUCKET=s3_apt_repo
+cp -Rp $HOME/.gnupg ./
+export S3_GPG_SIGN=true
+export S3_AMAZON_ACCESS_KEY_ID=..
+export S3_AMAZON_SECRET_ACCESS_KEY=...
+export S3_DEBIAN_CODENAME=precise
 kitchen converge build
 kitchen destroy build
 kitchen test test
+kitchen converge s3-upload
+kitchen destroy s3-upload
 ```
